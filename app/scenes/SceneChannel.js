@@ -535,7 +535,7 @@ SceneSceneChannel.loadDataRequest = function()
 		}
 		else
 		{
-			theUrl = 'http://usher.twitch.tv/api/channel/hls/' + SceneSceneBrowser.selectedChannel + '.m3u8?type=any&sig=' + SceneSceneChannel.tokenResponse.sig + '&token=' + escape(SceneSceneChannel.tokenResponse.token) + '&allow_source=true';
+			theUrl = 'http://usher.twitch.tv/api/channel/hls/'+ SceneSceneBrowser.selectedChannel + '.m3u8?player=twitchweb&token='+ SceneSceneChannel.tokenResponse.token +'&sig='+ SceneSceneChannel.tokenResponse.sig +'&$allow_audio_only=true&allow_source=true&type=any&p='+ Math.floor((Math.random() * 999999));
 		}
 		
 		xmlHttp.ontimeout = function()
